@@ -12,6 +12,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import utilities.Util;
 
+import java.io.IOException;
+
 
 public class RegistrationTests extends BaseTest {
     private boolean isExist;
@@ -22,7 +24,7 @@ public class RegistrationTests extends BaseTest {
     }
 
     @Test
-    public void validRegistration() {
+    public void validRegistration() throws IOException {
         successRegistrationPage = registrationPage.insertData(
                 "Shimaa", "Ismail", Util.getRandomString(7) + "@dxc.com", "01023456743", "sh123456");
         Assert.assertEquals(successRegistrationPage.CheckSuccessfulMessage(),
@@ -32,7 +34,7 @@ public class RegistrationTests extends BaseTest {
     }
 
     @Test
-    public void invalidRegistration() {
+    public void invalidRegistration() throws IOException {
         registrationPage.insertData(
                 "Shimaa", "Ismail", "", "", "");
         isExist = registrationPage.checkErrorMessages();

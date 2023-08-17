@@ -1,9 +1,16 @@
 package org.example.pageclasses;
 
 import base.BasePage;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import java.io.*;
 
 public class RegistrationPage extends BasePage {
     public WebDriver driver;
@@ -25,7 +32,20 @@ public class RegistrationPage extends BasePage {
         this.driver = driver;
     }
 
-    public SuccessRegistrationPage insertData(String fName, String lName, String email, String phone, String password) {
+    public SuccessRegistrationPage insertData(String fName, String lName, String email, String phone, String password) throws IOException {
+        File file = new File(System.getProperty("user.dir")+"/testdata/testdata.xlsx");
+        FileInputStream fileInputStream = new FileInputStream(file);
+        Workbook workbook = WorkbookFactory.create(fileInputStream);
+        Sheet sheet = workbook.getSheet("validLogin");
+        int rowNum = sheet.getLastRowNum() + 1;
+        Row row = sheet.createRow(rowNum);
+        row.createCell(0).setCellValue(email);
+        row.createCell(1).setCellValue(password);
+
+        FileOutputStream outputStream = new FileOutputStream(System.getProperty("user.dir")+"/testdata/testdata.xlsx");
+        workbook.write(outputStream);
+        workbook.close();
+
         sendData(firstName, fName, "First Name");
         sendData(lastName, lName, "Last Name");
         sendData(inputEmail, email, "Email");

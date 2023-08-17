@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+import java.io.FileReader;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
@@ -20,11 +22,14 @@ public class BaseTest {
     protected MyAccountPage myAccountPage;
 
     @BeforeClass
-    public void commonSetUp() {
+    public void commonSetUp() throws Exception{
+        FileReader reader = new FileReader("C:\\Users\\sismail30\\IdeaProjects\\shadow_program\\Data.properties");
+        Properties props = new Properties();
+        props.load(reader);
+
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        baseURL = "http://opencart.abstracta.us/index.php?route=common/home";
-        driver.get(baseURL);
+        driver.get(props.getProperty("url"));
         driver.manage().window().maximize();
         navigationPage = new NavigationPage(driver);
     }
