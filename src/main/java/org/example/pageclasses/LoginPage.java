@@ -22,31 +22,8 @@ public class LoginPage extends BasePage {
         this.driver = driver;
     }
 
-    public MyAccountPage login(boolean valid) throws IOException {
-        File file = new File(System.getProperty("user.dir")+"/testdata/testdata.xlsx");
-        FileInputStream fileInputStream = new FileInputStream(file);
-        Workbook workbook = WorkbookFactory.create(fileInputStream);
-        if (valid) {
-            sheet = workbook.getSheet("validLogin");
-        } else {
-            sheet = workbook.getSheet("invalidLogin");
-        }
-        int rowCount=sheet.getLastRowNum()-sheet.getFirstRowNum();
-        for(int i=0;i<=rowCount;i++){
-            //int cellcount=sheet.getRow(i).getLastCellNum();
-            System.out.println("Row"+ i+" data is :");
-            sendData(inputEmail, sheet.getRow(1).getCell(0).getStringCellValue(), "Email");
-            sendData(inputPassword, sheet.getRow(1).getCell(1).getStringCellValue(), "Password");
-//            for(int j=0;j<cellcount;j++){
-//                if (valid) {
-//                    String validEmail = sheet.getRow(0).getCell(0).getStringCellValue();
-//                } else {
-//                    sendData(inputPassword, sheet.getRow(1).getCell(1).getStringCellValue(), "Password");
-//                }
-//            }
-        }
-
-        //sendData(inputPassword, password, "Password");
+    public MyAccountPage login(String email, String password) throws IOException {
+        sendData(inputPassword, password, "Password");
         elementClick(loginBtn, "Logging Button");
         return new MyAccountPage(driver);
     }

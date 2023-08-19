@@ -33,19 +33,6 @@ public class RegistrationPage extends BasePage {
     }
 
     public SuccessRegistrationPage insertData(String fName, String lName, String email, String phone, String password) throws IOException {
-        File file = new File(System.getProperty("user.dir")+"/testdata/testdata.xlsx");
-        FileInputStream fileInputStream = new FileInputStream(file);
-        Workbook workbook = WorkbookFactory.create(fileInputStream);
-        Sheet sheet = workbook.getSheet("validLogin");
-        int rowNum = sheet.getLastRowNum() + 1;
-        Row row = sheet.createRow(rowNum);
-        row.createCell(0).setCellValue(email);
-        row.createCell(1).setCellValue(password);
-
-        FileOutputStream outputStream = new FileOutputStream(System.getProperty("user.dir")+"/testdata/testdata.xlsx");
-        workbook.write(outputStream);
-        workbook.close();
-
         sendData(firstName, fName, "First Name");
         sendData(lastName, lName, "Last Name");
         sendData(inputEmail, email, "Email");
@@ -75,13 +62,4 @@ public class RegistrationPage extends BasePage {
         errorText = getText(passwordErrorMessage, "Password Error Message");
         return isElementPresent(passwordErrorMessage, "password Error Message");
     }
-
-//    public void clearFields() {
-//        driver.findElement(By.id(firstName)).clear();
-//        driver.findElement(By.id(lastName)).clear();
-//        driver.findElement(By.id(inputEmail)).clear();
-//        driver.findElement(By.id(telephone)).clear();
-//        driver.findElement(By.id(inputPassword)).clear();
-//        driver.findElement(By.id(confirmPassword)).clear();
-//    }
 }
