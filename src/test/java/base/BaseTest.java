@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import utilities.Constants;
 
 import java.io.FileReader;
 import java.util.Properties;
@@ -23,7 +24,7 @@ public class BaseTest {
 
     @BeforeClass
     public void commonSetUp() throws Exception{
-        FileReader reader = new FileReader("C:\\Users\\sismail30\\IdeaProjects\\shadow_program\\Data.properties");
+        FileReader reader = new FileReader(Constants.USER_DIRECTORY + "\\Data.properties");
         Properties props = new Properties();
         props.load(reader);
 
