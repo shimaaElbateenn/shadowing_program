@@ -26,15 +26,16 @@ public class LoginTests extends BaseTest {
     }
 
     @Test(dataProvider = "getLoginData")
-    public void validLogin(String email, String password) throws IOException {
-        LoginPage loginPage = navigationPage.navigateToLoginPage();
-        MyAccountPage myAccountPage = loginPage.login(email, password);
+    public void validLogin(String email, String password) {
+        loginPage = navigationPage.navigateToLoginPage();
+        myAccountPage = loginPage.login(email, password);
         myAccountPage.verifyValidLogin();
+        navigationPage.logout();
     }
 
     @Test
-    public void inValidLogin() throws IOException {
-        LoginPage loginPage = navigationPage.navigateToLoginPage();
+    public void inValidLogin() {
+        loginPage = navigationPage.navigateToLoginPage();
         loginPage.login("invalid@gmail.com", "wo1203kd9");
         String errorMessage = loginPage.getErrorMessage();
         Assert.assertEquals(errorMessage, "Warning: No match for E-Mail Address and/or Password.");

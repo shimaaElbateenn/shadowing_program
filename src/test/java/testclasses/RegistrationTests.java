@@ -24,7 +24,7 @@ public class RegistrationTests extends BaseTest {
     }
 
     @Test
-    public void validRegistration() throws IOException {
+    public void validRegistration() {
         successRegistrationPage = registrationPage.insertData(
                 "Shimaa", "Ismail", Util.getRandomString(7) + "@dxc.com", "01023456743", "sh123456");
         Assert.assertEquals(successRegistrationPage.CheckSuccessfulMessage(),
@@ -34,7 +34,7 @@ public class RegistrationTests extends BaseTest {
     }
 
     @Test
-    public void invalidRegistration() throws IOException {
+    public void invalidRegistration() {
         registrationPage.insertData(
                 "Shimaa", "Ismail", "", "", "");
         isExist = registrationPage.checkErrorMessages();

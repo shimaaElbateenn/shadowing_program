@@ -22,7 +22,8 @@ public class LoginPage extends BasePage {
         this.driver = driver;
     }
 
-    public MyAccountPage login(String email, String password) throws IOException {
+    public MyAccountPage login(String email, String password) {
+        sendData(inputEmail, email, "Email");
         sendData(inputPassword, password, "Password");
         elementClick(loginBtn, "Logging Button");
         return new MyAccountPage(driver);

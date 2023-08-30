@@ -32,7 +32,7 @@ public class RegistrationPage extends BasePage {
         this.driver = driver;
     }
 
-    public SuccessRegistrationPage insertData(String fName, String lName, String email, String phone, String password) throws IOException {
+    public SuccessRegistrationPage insertData(String fName, String lName, String email, String phone, String password) {
         sendData(firstName, fName, "First Name");
         sendData(lastName, lName, "Last Name");
         sendData(inputEmail, email, "Email");

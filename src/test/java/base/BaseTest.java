@@ -1,9 +1,6 @@
 package base;
 
-import org.example.pageclasses.MyAccountPage;
-import org.example.pageclasses.NavigationPage;
-import org.example.pageclasses.RegistrationPage;
-import org.example.pageclasses.SuccessRegistrationPage;
+import org.example.pageclasses.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -19,8 +16,18 @@ public class BaseTest {
     protected String baseURL;
     protected NavigationPage navigationPage;
     protected RegistrationPage registrationPage;
+    protected LoginPage loginPage;
+    protected TabletsPage tabletsPage;
+    protected DesktopPage desktopPage;
+    protected SearchPage searchPage;
     protected SuccessRegistrationPage successRegistrationPage;
     protected MyAccountPage myAccountPage;
+    protected PhonesPage phonesPage;
+    protected ShoppingCartPage shoppingCartPage;
+    protected LaptopPage laptopPage;
+    protected MP3PlayersPage mp3PlayersPage;
+    protected CheckoutPage checkoutPage;
+    protected ConfirmOrderPage confirmOrderPage;
 
     @BeforeClass
     public void commonSetUp() throws Exception{
@@ -37,6 +44,6 @@ public class BaseTest {
 
     @AfterClass
     public void commonTearDown() {
-        driver.quit();
+       // driver.quit();
     }
 }
