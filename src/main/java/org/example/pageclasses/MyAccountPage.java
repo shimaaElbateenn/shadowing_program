@@ -12,7 +12,7 @@ public class MyAccountPage extends BasePage {
         this.driver = driver;
     }
 
-    public void verifyValidLogin() {
-        isElementPresent(title, "My Account title");
+    public boolean verifyValidLogin() {
+        return isElementPresent(title, "My Account title");
     }
 }

@@ -1,6 +1,7 @@
 package org.example.pageclasses;
 
 import base.BasePage;
+import com.shaft.gui.element.ElementActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,11 +17,13 @@ public class SuccessRegistrationPage extends BasePage {
     }
 
     public String CheckSuccessfulMessage() {
-        return getText(successMessage, "Success Message");
+        return ElementActions.getInstance().getText(getByType(successMessage));
+        //return getText(successMessage, "Success Message");
     }
 
     public boolean CheckLogOut() {
-        elementClick(accountDropdown, "Account Dropdown");
+        ElementActions.getInstance().click(getByType(accountDropdown));
+        //elementClick(accountDropdown, "Account Dropdown");
         return isElementPresent(logout, "Logout");
     }
 

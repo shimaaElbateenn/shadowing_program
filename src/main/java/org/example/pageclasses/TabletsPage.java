@@ -1,6 +1,7 @@
 package org.example.pageclasses;
 
 import base.BasePage;
+import com.shaft.gui.element.ElementActions;
 import org.openqa.selenium.WebDriver;
 
 import java.time.Duration;
@@ -18,17 +19,21 @@ public class TabletsPage extends BasePage {
     }
 
     public String getLastLinkBreadCrumb() {
-        return getText(lastElement, "Last Link on Bread Crumb");
+        return ElementActions.getInstance().getText(getByType(lastElement));
+//        return getText(lastElement, "Last Link on Bread Crumb");
     }
 
     public String getHighlightedLink() {
-        return getText(highLightedLink, "Highlighted Link");
+        return ElementActions.getInstance().getText(getByType(highLightedLink));
+//        return getText(highLightedLink, "Highlighted Link");
     }
 
     public String verifyAddingToCart() {
-        elementClick(addToCartBtn, "Add To Cart");
-        waitForElement(addtoCartMsg, 15);
-        return getText(addtoCartMsg, "Added To Cart Message");
+        ElementActions.getInstance().click(getByType(addToCartBtn));
+        return ElementActions.getInstance().getText(getByType(addtoCartMsg));
+//        elementClick(addToCartBtn, "Add To Cart");
+//        waitForElement(addtoCartMsg, 15);
+//        return getText(addtoCartMsg, "Added To Cart Message");
     }
 
 

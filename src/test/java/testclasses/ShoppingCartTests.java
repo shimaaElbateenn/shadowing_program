@@ -19,14 +19,17 @@ public class ShoppingCartTests extends BaseTest {
         laptopPage = navigationPage.navigateToLaptop();
         laptopPage.addLaptop();
         laptopPage.changeDeliveryDate();
+        String actualDeliveryDate = laptopPage.getDeliveryDate();
         laptopPage.addLaptopToCart();
         shoppingCartPage = navigationPage.navigateToShoppingCart();
         String deliveryDate = shoppingCartPage.getDeliveryDate();
-        Assert.assertEquals(deliveryDate, "Delivery Date: 2011-04-23");
+        Assert.assertEquals(deliveryDate, "Delivery Date: " + actualDeliveryDate);
         shoppingCartPage.calculateTotalCost();
         float expectedTotalPrice = shoppingCartPage.calculateTotalCost();
         float actualTotalCost = shoppingCartPage.getFloatTotalCost();
         Assert.assertEquals(expectedTotalPrice, actualTotalCost);
+        shoppingCartPage.removeProducts();
+        String breakpoint = "";
     }
 
 }

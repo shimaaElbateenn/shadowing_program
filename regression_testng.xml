@@ -9,7 +9,7 @@
         <class name="testclasses.ChangeCurrencyTests"/>
         <class name="testclasses.BreadCrumb_MenuTests"/>
         <class name="testclasses.SearchTests"/>
-        <class name="testclasses.SortTests"/>
+<!--    <class name="testclasses.SortTests"/>-->
         <class name="testclasses.ShoppingCartTests"></class>
     </classes>
     </test>

@@ -1,0 +1,112 @@
+[INFO ] 2023-09-13 13:22:58.103 [main] ReportManager - 
+[0;7m------------------------------------------------------------------------------------------------------------------------------------------------
+                                                   Powered by [1mSHAFT v.7.3.20230824.1[22m                                                   
+------------------------------------------------------------------------------------------------------------------------------------------------
+[0m
+[INFO ] 2023-09-13 13:23:11.156 [main] ReportManager - Loaded OpenCV "opencv_java470".
+[INFO ] 2023-09-13 13:23:11.158 [main] ReportManager - Initializing Allure Reporting Environment...
+[INFO ] 2023-09-13 13:23:11.356 [main] ReportManager - Initializing Extent Reporting Environment...
+[INFO ] 2023-09-13 13:23:12.063 [main] ReportManager - Initializing Summary Reporting Environment...
+[INFO ] 2023-09-13 13:23:12.442 [main] ReportManager - 
+[0;7m------------------------------------------------------------------------------------------------------------------------------------------------
+                                             Starting execution of suite setup configuration method                                             
+                                          'com.shaft.listeners.internal.ConfigurationHelper.suiteSetup'                                          
+------------------------------------------------------------------------------------------------------------------------------------------------
+[0m
+[INFO ] 2023-09-13 13:23:12.656 [main] ReportManager - Initializing Important Links...
+[INFO ] 2023-09-13 13:23:12.672 [main] ReportManager - Initializing Properties...
+[INFO ] 2023-09-13 13:23:12.909 [main] ReportManager - 
+[0;7m------------------------------------------------------------------------------------------------------------------------------------------------
+                                            Starting execution of common set up configuration method                                            
+                                                      'testclasses.SearchTests.commonSetUp'                                                      
+------------------------------------------------------------------------------------------------------------------------------------------------
+[0m
+[INFO ] 2023-09-13 13:23:12.962 [main] ReportManager - Setting "targetOperatingSystem" property with "windows".
+[INFO ] 2023-09-13 13:23:12.993 [main] ReportManager - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --remote-allow-origins=*, --enable-automation, --disable-background-timer-..., --disable-backgrounding-occ..., --disable-features=Calculat..., --disable-hang-monitor, --disable-domain-reliability, --disable-renderer-backgrou..., --disable-features=Autofill..., --metrics-recording-only, --no-first-run, --no-default-browser-check, --silent-debugger-extension..., --disable-extensions, --disable-component-extensi..., --disable-dev-shm-usage, --disable-features=MediaRouter, --disable-features=Translate, --disable-ipc-flooding-prot..., --disable-background-networ..., --mute-audio, --disable-breakpad, --ignore-certificate-errors, --disable-device-discovery-..., --force-color-profile=srgb, --hide-scrollbars, --host-resolver-rules, --no-pings, --disable-features=AvoidUnn..., --disable-features=Certific..., --disable-sync, --disable-features=Optimiza..., --disable-features=DialMedi..., --disable-features=GlobalMe..., --disable-features=Improved..., --disable-features=LazyFram..., --disable-field-trial-config, --enable-features=NetworkSe..., --enable-features=NetworkSe..., --enable-use-zoom-for-dsf, --log-net-log, --net-log-capture-mode, --disable-client-side-phish..., --disable-default-apps, --disable-features=Interest...], extensions: [], prefs: {download.default_directory: C:\Users\sismail30\IdeaProj..., download.prompt_for_download: false, profile.default_content_settings.popups: 0}}, pageLoadStrategy: none, timeouts: {pageLoad: 60000, script: 30000}, unhandledPromptBehavior: accept and notify}
+[INFO ] 2023-09-13 13:23:12.995 [main] ReportManager - Attempting to run locally on: "windows | Chrome".
+[INFO ] 2023-09-13 13:23:12.996 [main] ReportManager - Identifying OS/Driver combination and selecting the correct driver version automatically. Please note that if a new driver executable will be downloaded it may take some time...
+[WARN ] 2023-09-13 13:23:18.767 [main] ReportManager - Sep 13, 2023 1:23:18 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+[WARN ] 2023-09-13 13:23:18.767 [main] ReportManager - WARNING: Unable to find an exact match for CDP version 116, so returning the closest version found: 115
+[INFO ] 2023-09-13 13:23:18.787 [main] ReportManager - Successfully Opened: "windows | Chrome".
+[INFO ] 2023-09-13 13:23:18.962 [main] ReportManager - 
+[0;7m------------------------------------------------------------------------------------------------------------------------------------------------
+                                        Starting Execution: '1 out of 2' test cases in the current suite                                        
+                                               Test Method: 'testclasses.SearchTests.searchByName'                                               
+------------------------------------------------------------------------------------------------------------------------------------------------
+[0m
+[INFO ] 2023-09-13 13:23:18.991 [main] ReportManager - Waiting for max:: 15 seconds for element to be available
+[INFO ] 2023-09-13 13:23:21.361 [main] ReportManager - Element appeared on the web page
+[INFO ] 2023-09-13 13:23:21.573 [main] ReportManager - Clicked On :: Account Dropdown
+[INFO ] 2023-09-13 13:23:21.678 [main] ReportManager - Clicked On :: Login Link
+[INFO ] 2023-09-13 13:23:23.834 [main] ReportManager - Send Keys on element :: Email with data :: shimaa3@dxc.com
+[INFO ] 2023-09-13 13:23:24.125 [main] ReportManager - Send Keys on element :: Password with data :: sh123456
+[INFO ] 2023-09-13 13:23:24.248 [main] ReportManager - Clicked On :: Logging Button
+[INFO ] 2023-09-13 13:23:25.106 [main] ReportManager - Send Keys on element :: Search Keyword with data :: Mac
+[INFO ] 2023-09-13 13:23:25.203 [main] ReportManager - Clicked On :: Search Button
+[INFO ] 2023-09-13 13:23:25.630 [main] ReportManager - Element List found with: xpath=>//*[@id="content"]/div[3]/div/div/div[2]/div[1]/h4/a
+[INFO ] 2023-09-13 13:23:25.631 [main] ReportManager - Getting Text on element :: Product title
+[INFO ] 2023-09-13 13:23:25.674 [main] ReportManager -  The text is : iMac
+[INFO ] 2023-09-13 13:23:25.675 [main] ReportManager - Getting Text on element :: Product title
+[INFO ] 2023-09-13 13:23:25.690 [main] ReportManager -  The text is : MacBook
+[INFO ] 2023-09-13 13:23:25.691 [main] ReportManager - Getting Text on element :: Product title
+[INFO ] 2023-09-13 13:23:25.707 [main] ReportManager -  The text is : MacBook Air
+[INFO ] 2023-09-13 13:23:25.707 [main] ReportManager - Getting Text on element :: Product title
+[INFO ] 2023-09-13 13:23:25.727 [main] ReportManager -  The text is : MacBook Pro
+[INFO ] 2023-09-13 13:23:25.837 [main] ReportManager - Clicked On :: Account Dropdown
+[INFO ] 2023-09-13 13:23:25.955 [main] ReportManager - Clicked On :: Logout
+[INFO ] 2023-09-13 13:23:25.997 [main] ReportManager - Successfully created attachment 'SHAFT Engine Logs - Current Method log: searchByName'
+[INFO ] 2023-09-13 13:23:25.998 [main] ReportManager - 
+[0;7m------------------------------------------------------------------------------------------------------------------------------------------------
+                                    Finished Execution of Test Method: 'testclasses.SearchTests.searchByName'                                    
+                                                              Test Status: 'Passed'                                                              
+------------------------------------------------------------------------------------------------------------------------------------------------
+[0m
+[INFO ] 2023-09-13 13:23:26.277 [main] ReportManager - 
+[0;7m------------------------------------------------------------------------------------------------------------------------------------------------
+                                        Starting Execution: '2 out of 2' test cases in the current suite                                        
+                                          Test Method: 'testclasses.SearchTests.searchInSubcategories'                                          
+------------------------------------------------------------------------------------------------------------------------------------------------
+[0m
+[INFO ] 2023-09-13 13:23:26.284 [main] ReportManager - Waiting for max:: 15 seconds for element to be available
+[INFO ] 2023-09-13 13:23:26.949 [main] ReportManager - Element appeared on the web page
+[INFO ] 2023-09-13 13:23:27.055 [main] ReportManager - Clicked On :: Account Dropdown
+[INFO ] 2023-09-13 13:23:27.189 [main] ReportManager - Clicked On :: Login Link
+[INFO ] 2023-09-13 13:23:27.888 [main] ReportManager - Send Keys on element :: Email with data :: shimaa3@dxc.com
+[INFO ] 2023-09-13 13:23:28.104 [main] ReportManager - Send Keys on element :: Password with data :: sh123456
+[INFO ] 2023-09-13 13:23:28.218 [main] ReportManager - Clicked On :: Logging Button
+[INFO ] 2023-09-13 13:23:29.066 [main] ReportManager - Send Keys on element :: Search Keyword with data :: Apple
+[INFO ] 2023-09-13 13:23:29.177 [main] ReportManager - Clicked On :: Search Button
+[INFO ] 2023-09-13 13:23:29.706 [main] ReportManager - Clicked On :: Category Dropdown
+[INFO ] 2023-09-13 13:23:29.803 [main] ReportManager - Clicked On :: Component Option
+[INFO ] 2023-09-13 13:23:29.926 [main] ReportManager - Clicked On :: Search Button
+[INFO ] 2023-09-13 13:23:32.974 [main] ReportManager - Element List found with: class=>.product-layout
+[INFO ] 2023-09-13 13:23:33.061 [main] ReportManager - Element :: Search In Subcategory is already selected
+[INFO ] 2023-09-13 13:23:33.150 [main] ReportManager - Clicked On :: Search In Subcategory
+[INFO ] 2023-09-13 13:23:33.152 [main] ReportManager - Element :: Search In Subcategory is checked
+[INFO ] 2023-09-13 13:23:33.248 [main] ReportManager - Clicked On :: Search Button
+[INFO ] 2023-09-13 13:23:35.286 [main] ReportManager - Getting Text on element :: Product Title
+[INFO ] 2023-09-13 13:23:35.306 [main] ReportManager -  The text is : Apple Cinema 30"
+[INFO ] 2023-09-13 13:23:35.394 [main] ReportManager - Clicked On :: Account Dropdown
+[INFO ] 2023-09-13 13:23:35.459 [main] ReportManager - Clicked On :: Logout
+[INFO ] 2023-09-13 13:23:35.465 [main] ReportManager - Successfully created attachment 'SHAFT Engine Logs - Current Method log: searchInSubcategories'
+[INFO ] 2023-09-13 13:23:35.467 [main] ReportManager - 
+[0;7m------------------------------------------------------------------------------------------------------------------------------------------------
+                               Finished Execution of Test Method: 'testclasses.SearchTests.searchInSubcategories'                               
+                                                              Test Status: 'Passed'                                                              
+------------------------------------------------------------------------------------------------------------------------------------------------
+[0m
+[INFO ] 2023-09-13 13:23:35.477 [main] ReportManager - 
+[0;7m------------------------------------------------------------------------------------------------------------------------------------------------
+                                           Starting execution of common tear down configuration method                                           
+                                                    'testclasses.SearchTests.commonTearDown'                                                    
+------------------------------------------------------------------------------------------------------------------------------------------------
+[0m
+[INFO ] 2023-09-13 13:23:36.741 [main] ReportManager - 
+[0;7m------------------------------------------------------------------------------------------------------------------------------------------------
+                                           Starting execution of engine teardown configuration method                                           
+                                        'com.shaft.listeners.internal.ConfigurationHelper.engineTeardown'                                        
+------------------------------------------------------------------------------------------------------------------------------------------------
+[0m
+[INFO ] 2023-09-13 13:23:36.743 [main] ReportManager - Successfully created attachment 'SHAFT Engine Logs - Execution log'
+[INFO ] 2023-09-13 13:23:36.745 [main] ReportManager - File Action "DoesFileExist" successfully performed. With the following test data "File Path: "target/logs/log4j.log"".
+[INFO ] 2023-09-13 13:23:36.747 [main] ReportManager - File Action "GetAbsolutePath" successfully performed. With the following test data "Relative Folder Path: "target/logs/log4j.log"".

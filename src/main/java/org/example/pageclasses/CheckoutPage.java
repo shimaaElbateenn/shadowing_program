@@ -1,6 +1,9 @@
 package org.example.pageclasses;
 
 import base.BasePage;
+import com.shaft.enums.internal.ElementAction;
+import com.shaft.gui.browser.BrowserActions;
+import com.shaft.gui.element.ElementActions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -23,6 +26,8 @@ public class CheckoutPage extends BasePage {
     private String termsCheckbox = "xpath=>//*[@id=\"collapse-payment-method\"]/div/div[3]/div/input[1]";
     private String totalPrice = "xpath=>//*[@id=\"collapse-checkout-confirm\"]/div/div[1]/table/tfoot/tr[1]/td[2]";
     private String confirmOrderBtn = "id=>button-confirm";
+    private String countryValue = "xpath=>//*[@id=\"input-payment-country\"]/option[70]";
+    private String stateValue = "xpath=>//*[@id=\"input-payment-zone\"]/option[3]";
 
 
     public CheckoutPage(WebDriver driver) {
@@ -31,6 +36,18 @@ public class CheckoutPage extends BasePage {
     }
 
     public void fillBillingDetails(String fName, String lName, String address, String city) {
+//        ElementActions.getInstance().click(getByType(newAddressOption));
+//        ElementActions.getInstance().type(getByType(fNameField), fName);
+//        ElementActions.getInstance().type(getByType(lNameField), lName);
+//        ElementActions.getInstance().type(getByType(addressField), address);
+//        ElementActions.getInstance().type(getByType(cityField), city);
+//
+//        ElementActions.getInstance().click(getByType(countryField));
+//        ElementActions.getInstance().click(getByType(countryValue));
+//        ElementActions.getInstance().click(getByType(state));
+//        ElementActions.getInstance().click(getByType(stateValue));
+//        ElementActions.getInstance().click(getByType(continueBtnPayment));
+
         Check(newAddressOption, "New Address");
         sendData(fNameField, fName, "First Name");
         sendData(lNameField, lName, "Last Name");
@@ -45,20 +62,27 @@ public class CheckoutPage extends BasePage {
 
     public String checkAddressDropdown() {
         waitForElement(addressDropdown, 15);
+//        ElementActions.getInstance().click(getByType(addressDropdown));
         elementClick(addressDropdown, "Address Dropdown");
+//        return ElementActions.getInstance().getText(getByType(savedAddress));
         return getText(savedAddress, "Saved Address");
     }
 
     public void clickContinueAddress() {
+//        ElementActions.getInstance().click(getByType(continueBtnShipping));
         elementClick(continueBtnShipping, "Continue Button");
     }
 
     public void addCommentAndClickContinue(String comment) {
+//        ElementActions.getInstance().type(getByType(commentSection), comment);
+//        ElementActions.getInstance().click(getByType(continueBtnShipping2));
         sendData(commentSection, comment, "Comment");
         elementClick(continueBtnShipping2, "Continue Button");
     }
 
     public void checkTermsAndConditions() {
+//        ElementActions.getInstance().click(getByType(termsCheckbox));
+//        ElementActions.getInstance().click(getByType(paymentMethodContinue));
         Check(termsCheckbox, "Terms And Conditions");
         elementClick(paymentMethodContinue, "Payment Method Continue");
     }
@@ -68,6 +92,7 @@ public class CheckoutPage extends BasePage {
     }
 
     public ConfirmOrderPage confirmOrder() {
+//        ElementActions.getInstance().click(getByType(confirmOrderBtn));
         elementClick(confirmOrderBtn, "Confirm Order Button");
         return new ConfirmOrderPage(driver);
     }

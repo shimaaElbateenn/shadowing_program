@@ -29,7 +29,7 @@ public class RegistrationTests extends BaseTest {
                 "Shimaa", "Ismail", Util.getRandomString(7) + "@dxc.com", "01023456743", "sh123456");
         Assert.assertEquals(successRegistrationPage.CheckSuccessfulMessage(),
                 "Congratulations! Your new account has been successfully created!");
-        Assert.assertEquals(successRegistrationPage.CheckLogOut(), true);
+        Assert.assertTrue(successRegistrationPage.CheckLogOut());
         successRegistrationPage.Logout();
     }
 

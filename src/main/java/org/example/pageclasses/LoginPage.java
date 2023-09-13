@@ -1,6 +1,8 @@
 package org.example.pageclasses;
 
 import base.BasePage;
+import com.shaft.enums.internal.ElementAction;
+import com.shaft.gui.element.ElementActions;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -23,6 +25,9 @@ public class LoginPage extends BasePage {
     }
 
     public MyAccountPage login(String email, String password) {
+//        ElementActions.getInstance().type(getByType(inputEmail), email);
+//        ElementActions.getInstance().type(getByType(inputPassword), password);
+//        ElementActions.getInstance().click(getByType(loginBtn));
         sendData(inputEmail, email, "Email");
         sendData(inputPassword, password, "Password");
         elementClick(loginBtn, "Logging Button");
@@ -30,6 +35,8 @@ public class LoginPage extends BasePage {
     }
 
     public String getErrorMessage() {
+        waitForElement(errorMessage, 15);
+        //return ElementActions.getInstance().getText(getByType(errorMessage));
         return getText(errorMessage, "Error Message");
     }
 }

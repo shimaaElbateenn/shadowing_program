@@ -29,7 +29,7 @@ public class LoginTests extends BaseTest {
     public void validLogin(String email, String password) {
         loginPage = navigationPage.navigateToLoginPage();
         myAccountPage = loginPage.login(email, password);
-        myAccountPage.verifyValidLogin();
+        Assert.assertTrue(myAccountPage.verifyValidLogin());
         navigationPage.logout();
     }
 
